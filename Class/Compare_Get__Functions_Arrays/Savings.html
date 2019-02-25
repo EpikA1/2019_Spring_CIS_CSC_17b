@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+    Dr. Mark E. Lehr
+    Feb 25th, 2019
+    Include a function library with arrays utilization
+-->
+<html>
+    <head>
+        <title>Utilize the Savings Javascript Functions</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Inserting Libraries -->
+        <script type="text/javascript" src="./JavascriptSavingsFunctions.js">
+        </script>
+    </head>
+    <body>
+         <script type="text/javascript">
+            //Declare variables
+            var pv=100;  //Present Value in $'s
+            var int=0.06;//Interest Rate %
+            var nYears=12;//Number of compounding periods (yrs)
+
+            //Perform Calculation / Call the function
+            var fv1=save1(pv,int,nYears);
+            var fv2=save2(pv,int,nYears);
+            var fv3=save3(pv,int,nYears);
+            var fv4=save4(pv,int,nYears);
+            var fv5=save5(pv,int);
+            var fv6={save:0};
+            save6(pv,int,nYears,fv6);
+            var fv7=save7(pv,int,nYears);
+
+            //Display the results
+            document.write("<p>Present Value   = $"+pv+"</p>");
+            document.write("<p>Interest Rate   =  "+int*100+"%</p>");
+            document.write("<p>Number of Years = "+nYears+"</p>");
+            document.write("<p>Future Value    = $"+fv1.toFixed(2)+"</p>");
+            document.write("<p>Future Value    = $"+fv2.toFixed(2)+"</p>");
+            document.write("<p>Future Value    = $"+fv3.toFixed(2)+"</p>");
+            document.write("<p>Future Value    = $"+fv4.toFixed(2)+"</p>");
+            document.write("<p>Future Value    = $"+fv5.toFixed(2)+"</p>");
+            document.write("<p>Future Value    = $"+fv6.save.toFixed(2)+"</p>");
+            display(fv7);	
+        </script>
+    </body>
+</html>
